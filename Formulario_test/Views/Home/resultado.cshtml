@@ -1,0 +1,68 @@
+﻿@model MVCFogeo2.Models.Usuario
+@{
+    ViewData["Title"] = "resultado";
+}
+
+<h1>resultado</h1>
+
+<body bgcolor="#E3E1E1">
+<div class="text-center">
+    <h1 class="display-4">Fogueo 2</h1>
+</div>
+<br>
+
+<div class="shadow p-3 mb-5 bg-body-tertiary rounded"style="display: flex; justify-content: space-between ">
+<div class="card checkp ">   
+    <div class="card-header"><h6>Informacion Persoal</h6> </div>
+    <div class=" card-body">
+ <div class="">
+    <form class="row g-3 ">
+  <div class="col-md-6">
+      <label for="inputName" class="form-label">Name</label>
+      <label type="Name" class="form-control" id="inputName"> @Model.Nombre  </label>
+  </div>
+  <div class="col-md-6">
+     <label for="inputApellido" class="form-label">Apellido</label>
+     <label type="Apellido" class="form-control" id="inputApellido">@Model.apellido  </label>
+  </div>
+  <div class="col-12">
+     <label for="inputCedula" class="form-label">Cedula</label>
+     <label type="Cedula" class="form-control" id="inputCedula">@Model.cedula  </label>
+  </div>
+  <div class="col-12">
+     <label for="inputCedula" class="form-label">telefono</label>
+     <label type="Cedula" class="form-control" id="inputCedula">@Model.telefono  </label>
+  </div>
+   <div class="col-12">
+     <label for="inputCedula" class="form-label">Estado civil</label>
+     <label type="Cedula" class="form-control" id="inputCedula">@Model.estado  </label>
+  </div>
+ 
+  <div class="col-12 card-body">
+     
+     <label for="inputEmail" class="form-label">Email</label>
+   <label type="Email" class="form-control" id="inputEmail">@Model.email</label>
+  </div>
+  <div class="col-md-6">
+        <label for="inputMatricula" class="form-label">edad</label>
+        <label type="Matricula" class="form-control" id="inputMatricula">@Model.edad</label>
+  </div>
+  <div class="col-md-4">
+     <label for="inputCarrera" class="form-label">genero</label>
+     <label type="Carrera" class="form-control" id="inputCarrera">@Model.genero </label>
+  </div>
+  <div class="col-md-4">
+     <label for="inputCarrera" class="form-label">hobbys</label>
+     <label type="Carrera" class="form-control" id="inputCarrera">@Model.hobbys </label>
+  </div>
+   
+</form>
+</div>
+  </div>
+  </div>
+
+  <div class="">
+      <img src="data:@Model.fotoContentType;base64,@Convert.ToBase64String(Model.foto)" class="card-img-top" alt="..." id="img-preview">
+  </div>
+</div>
+</body>

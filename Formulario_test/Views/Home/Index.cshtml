@@ -1,0 +1,88 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<body>
+    <section class="container" >
+        
+       <div class="row my-5" >
+           <div class="col-sm-12 col-md-12 col-lg-12">
+
+         
+           <form action="Home/resultado"  method="post" class="formulario" id="formulario" enctype="multipart/form-data">
+                    <h4 class="display-4 text-center text-white">Registro</h4>
+               <div class="from-group">
+                    <label class="text-white">Nombre:</label>
+                     <input type="text" placeholder="introducir Nombres" maxlength="40" id="nombre" class="form-control" name="nombre" >
+               </div>
+              <div class="from-group" >
+                  <label class="text-white">Apellido :</label>
+                 <input type="text" placeholder="introducir Apellido " maxlength="40" id="apellido"  class="form-control" name="Apellido">
+
+              </div >
+               <div class="from-group">
+                   <label class="text-white">Cédula :</label>
+                    <input type="text" placeholder="introducir Cédula " maxlength="20"id="cedula" class="form-control" name="cedula">
+
+              </div>
+               <div class="from-group">
+                    <label class="text-white">Edad:</label>
+                     <input type="number" placeholder="introducir Edad" min="3"  max="99 "id="edad" class="form-control" name="edad" value="3">
+              </div>
+               <div class="from-group">
+                   <label class="text-white">Teléfono:</label>
+                    <input type="text" placeholder="introducir Teléfono" id="telefono" class="form-control" name="telefono"> 
+
+              </div>
+               <div class="from-group">
+                   <label class="text-white">Correo electrónico:</label>
+                     <input type="text" placeholder="introducir Correo electrónico" maxlength="60" id="email" class="form-control" name="email">
+              </div>
+              <div class="from-group" >
+                   <label class="text-white">Género:</label>
+                 <select name="genero" id="genero" class="form-control" >
+                  
+                     <option value="Masculino">Masculino</option>
+                      <option value="Femenino">Femenino</option>
+
+                 </select>
+              </div>
+              <div class="from-group">
+                  
+                     <label class="text-white">Estado civil:</label>
+                 <select name="estado" id="Estadocivil"class="form-control" >
+                     
+                      <option value="Soltero">Soltero</option>
+                       <option value="Casado">Casado</option>
+                 </select>
+              </div>
+               <div class="from-group">
+                     <label class="text-white">Hobbys:</label>
+                    <select name="hobbys" id="hobbys" class="form-control">
+                       
+                     <option value="leer">leer</option>
+                      <option value="dibujar">dibujar</option>
+
+                 </select>
+              </div>
+               <div class="from-group">
+                    <label class="text-white">Foto :</label>
+               <input type="file"id="foto" class="form-control" name="foto" {f}>
+
+              </div>
+               <div class="from-group">
+                     
+               <input type="submit"id="datos" class="btn-primary "  value="Enviar">
+               </div> 
+               <div class="from-group">
+                  
+               <button  type="submit"id="Limpiar" class="btn-danger "  value="eliminar">Eliminar </button>
+
+              </div>         
+           </form>
+          </div>
+       </div>
+    </section>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css">
+</body>
