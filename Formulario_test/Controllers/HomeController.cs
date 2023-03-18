@@ -23,6 +23,7 @@ public class HomeController : Controller
     
     public IActionResult resultado(Usuario u)
     {
+        
         var formFiles = Request.Form.Files;
         var imageFile = formFiles[0];
 

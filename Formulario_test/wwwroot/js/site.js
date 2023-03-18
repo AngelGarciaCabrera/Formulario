@@ -39,7 +39,7 @@ foto.addEventListener("change", (event) => {
 function Validate() {
     
    
-    let isvalid = true;
+    let isValid = true;
     const valueName = Name.value;
     if (valueName == "" || valueName == null || valueName == undefined) {
         Name.classList.add("input-error");
@@ -74,7 +74,8 @@ function Validate() {
     //edad
     const valueold = old.value;
 
-    if (valueold == "" || valueold == null || valueold == undefined) {
+    if (valueold < 10 || valueold == null || valueold == undefined) {
+        window.alert("la edad debe ser mayor a 10")
         old.classList.add("input-error");
         isValid = false;
     } else {
@@ -107,7 +108,7 @@ function Validate() {
   
     if (valuegenero == "Masculino" || valuegenero == "Femenino") {
         genero.classList.add("input-correct");
-        isValid = true;
+       
     } else {
         isValid = false;
         genero.classList.add("input-error");
@@ -119,7 +120,7 @@ function Validate() {
 
     if (valueEstadocivil == "Soltero" || valueEstadocivil == "Casado") {
         Estadocivil.classList.add("input-correct");
-        isValid = true
+       
     } else {
         isValid = false
         Estadocivil.classList.add("input-error");
@@ -145,7 +146,11 @@ function Validate() {
         foto.classList.remove("input-error");
         foto.classList.add("input-correct");
     }
-    
+    if (isValid == false || isValid == null || isValid == undefined) {
+        window.alert("debe completar los datos")
+    } else {
+        formulario.submit()
+    }
     
     return isValid;
 
@@ -170,18 +175,19 @@ function clear() {
 guardar.addEventListener('click', function (e) {
   
     e.preventDefault();
-    if (Validate()) {
-        formulario.submit()
-     
-    }
+    Validate()
+    
+   
    
 })
 
 
 
-Limpiar.addEventListener('click', function (e) {
 
-    e.preventDefault();
+Limpiar.addEventListener('click', function (a) {
+
+    a.preventDefault();
+   
     clear();
 })
 

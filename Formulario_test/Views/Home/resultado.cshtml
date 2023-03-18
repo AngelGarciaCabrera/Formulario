@@ -5,13 +5,9 @@
 
 
 
-<body bgcolor="#E3E1E1"><div class="text-center">
- 
+<body><div class="text-center  shadow-lg p-3 mb-5 bg-body-tertiary rounded"  >
+ <H4>Informacion Personal</H4>
 </div>
-
-<br>
-<h1>Resultado</h1>
-
 <div class="shadow p-3 mb-5 bg-body-tertiary rounded"style="display: flex; justify-content: space-between ">
 <div class="card checkp ">   
     <div class="card-header"><h6>Informacion Persoal</h6> </div>
@@ -62,8 +58,8 @@
   </div>
   </div>
 
-  <div class="">
-      <img src="data:@Model.fotoContentType;base64,@Convert.ToBase64String(Model.foto)" class="card-img-top" alt="..." id="img-preview">
+  <div class="card-img-top">
+      <img src="data:@Model.fotoContentType;base64,@Convert.ToBase64String(Model.foto)" class="foto" alt="..." id="img-preview" >
   </div>
 </div>
 </body>
