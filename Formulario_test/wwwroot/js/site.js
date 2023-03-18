@@ -74,8 +74,8 @@ function Validate() {
     //edad
     const valueold = old.value;
 
-    if (valueold < 10 || valueold == null || valueold == undefined) {
-        window.alert("la edad debe ser mayor a 10")
+    if (valueold < 18 || valueold == null || valueold == undefined) {
+        window.alert("la edad debe ser mayor a 18")
         old.classList.add("input-error");
         isValid = false;
     } else {
